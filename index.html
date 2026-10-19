@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101620" />
+  <meta name="description" content="Horatio’s: El Impostor. Mentiras, cerveza, pistas y acusaciones entre colegas. Un solo móvil, sin registro ni publicidad." />
+  <title>Horatio’s · El Impostor — Edición de la casa</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0c121b;--panel:#151e2a;--panel2:#1b2634;--border:#303e4e;--ink:#f3f6f4;--muted:#a1b1bf;--lime:#ffca70;--lime-ink:#262011;--pink:#ff918f;--blue:#90bce8;--shadow:0 24px 65px rgba(0,0,0,.24)}
+    *{box-sizing:border-box}html{min-height:100%;scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse 72% 36% at 4% -8%,#203a3a 0,transparent 72%),radial-gradient(ellipse 50% 55% at 100% 92%,#20304a 0,transparent 75%),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45}button,input,textarea,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--lime);outline-offset:3px}button:disabled{opacity:.45;cursor:not-allowed}a{color:var(--lime)}.app-shell{width:min(1120px,calc(100% - 36px));margin:0 auto}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:25px 0 12px}.brand{display:flex;align-items:center;gap:10px;font-size:1.05rem;font-weight:900;letter-spacing:.03em}.brand-icon{display:grid;place-items:center;width:35px;height:35px;border-radius:11px;background:var(--lime);color:var(--lime-ink);font-size:23px;transform:rotate(-8deg)}.top-hint{color:var(--muted);font-size:.84rem;letter-spacing:.02em}.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid #3b4a4c;padding:7px 12px;border-radius:99px;background:#1b292a;color:#d2ece3;font-weight:750;font-size:.73rem;letter-spacing:.12em;text-transform:uppercase}.dot{width:7px;height:7px;background:var(--lime);border-radius:50%;box-shadow:0 0 0 4px #ffca7020}.landing{display:grid;grid-template-columns:minmax(0,1fr) minmax(330px,425px);gap:42px;align-items:start;margin-top:35px}.hero{padding:27px 0 0}.hero h1{font-size:clamp(3.7rem,7vw,6.75rem);font-weight:950;line-height:.96;letter-spacing:-.075em;max-width:580px;margin:22px 0}.hero h1 span{display:block;color:var(--lime)}.lede{color:#b4c2cd;font-size:1.09rem;max-width:500px;line-height:1.65}.features{display:flex;gap:9px;flex-wrap:wrap;margin:25px 0}.feature{border:1px solid #384757;border-radius:12px;padding:9px 11px;font-size:.78rem;color:#c7d0d8}.graphic{margin-top:42px;width:min(430px,100%);height:240px;position:relative;isolation:isolate}.glow{position:absolute;width:270px;height:180px;left:50px;top:22px;background:#ffc16b25;filter:blur(65px);z-index:-1}.poster{position:absolute;width:200px;height:214px;border-radius:21px;left:18%;top:4%;border:1px solid #b88a54;background:linear-gradient(140deg,#3f3225,#211e1d);box-shadow:var(--shadow);transform:rotate(-11deg);display:flex;flex-direction:column;justify-content:center;align-items:center}.poster::before{content:'CONFIDENCIAL';position:absolute;top:18px;font-size:10px;letter-spacing:.22em;color:#8db7a1}.poster .q{font-size:116px;font-weight:900;letter-spacing:-.09em;line-height:1;color:var(--lime)}.poster-shadow{position:absolute;width:195px;height:210px;left:30%;top:9%;border:1px solid #a2736f;border-radius:20px;background:linear-gradient(145deg,#5b343c,#2f212e);transform:rotate(12deg);z-index:-1}.poster-shadow::after{content:'';position:absolute;inset:35px;border-radius:50%;border:2px dashed #b36e78}.seal{position:absolute;top:65%;left:62%;font-size:.72rem;background:var(--pink);color:#351a20;transform:rotate(8deg);font-weight:900;letter-spacing:.13em;padding:11px 15px;border:3px solid #10161c;border-radius:8px}.setup{background:linear-gradient(150deg,#1b2532,#151e29);border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow);padding:25px}.panel-title{display:flex;justify-content:space-between;align-items:center;gap:12px}.panel-title h2{font-size:1.42rem;letter-spacing:-.03em;margin:0}.mini-id{font-size:.76rem;color:var(--lime);font-weight:900;letter-spacing:.13em}.helper{font-size:.83rem;color:var(--muted);margin:9px 0 21px}.field{margin-top:17px}.field label,.field .field-label{display:block;color:#e0e8ed;font-size:.88rem;font-weight:750;margin-bottom:8px}.sub-label{font-size:.75rem;color:var(--muted);font-weight:500}.textarea,.select,.num-select{width:100%;background:#0d1721;color:#f0f4f2;border:1px solid #374656;border-radius:12px;padding:11px 13px}.textarea{resize:vertical;min-height:148px;line-height:1.48}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.select,.num-select{min-height:46px}.field small{color:var(--muted);font-size:.73rem}.btn{border:0;border-radius:13px;padding:13px 18px;font-size:.95rem;font-weight:900;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;transition:transform .12s,background .15s}.btn:active{transform:scale(.985)}.btn-primary{background:var(--lime);color:var(--lime-ink)}.btn-primary:hover{background:#ffdda1}.btn-secondary{background:#263443;color:#eff6f1;border:1px solid #3d5063}.btn-secondary:hover{background:#304254}.btn-danger{background:#4d2e37;color:#ffe9e7;border:1px solid #82505d}.btn-wide{width:100%}.setup .btn-wide{margin-top:21px}.error{background:#47292d;border:1px solid #b55d67;color:#ffe4e1;padding:11px 13px;border-radius:11px;font-size:.82rem;margin:13px 0 0}.footer{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #273443;margin:32px 0 0;padding:20px 0 30px;color:#718695;font-size:.77rem}.footer strong{color:#b1c1ca}.stage{width:min(680px,100%);margin:44px auto 40px}.stage-head{text-align:center;margin-bottom:24px}.stage-head h1{font-size:clamp(2rem,7vw,3rem);line-height:1.08;letter-spacing:-.05em;margin:14px 0 8px}.stage-head p{margin:0;color:var(--muted)}.stage-head .pill{margin-bottom:4px}.stage-card{background:linear-gradient(145deg,#1b2633,#141e2a);border:1px solid #394a58;border-radius:25px;padding:clamp(22px,5vw,36px);box-shadow:var(--shadow)}.progress{display:flex;gap:7px;margin:24px 0 20px}.progress span{flex:1;height:7px;border-radius:30px;background:#334150}.progress span.done{background:var(--lime)}.progress span.current{background:var(--blue)}.turn-label{text-align:center;color:var(--muted);font-size:.83rem;text-transform:uppercase;letter-spacing:.14em;font-weight:800}.player-name{text-align:center;font-size:clamp(2.35rem,9vw,4.45rem);font-weight:950;letter-spacing:-.065em;overflow-wrap:anywhere;margin:10px 0 17px}.hidden-card{background:repeating-linear-gradient(135deg,#1a2a35,#1a2a35 14px,#1c2e3b 14px,#1c2e3b 28px);border:1px dashed #658095;min-height:180px;border-radius:17px;display:grid;place-items:center;text-align:center;padding:24px}.hidden-card .symbol{font-size:67px;color:#9bacb8;font-weight:900;line-height:1}.hidden-card p{color:#bfd0db;max-width:290px;margin:9px auto 0}.role-card{border-radius:17px;min-height:180px;padding:25px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px}.role-card.crew{background:#283e31;border:1px solid #739469}.role-card.impostor{background:#462c39;border:1px solid #b16a7b}.role-kicker{font-size:.72rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase}.role-word{font-size:clamp(2rem,8vw,3.7rem);line-height:1.1;font-weight:950;letter-spacing:-.045em;overflow-wrap:anywhere}.role-card.crew .role-word{color:var(--lime)}.role-card.impostor .role-word{color:#ffa6a4}.role-desc{font-size:.86rem;max-width:350px;color:#e1eae2}.btn-row{display:flex;gap:10px;margin-top:20px}.btn-row > *{flex:1}.notice{font-size:.78rem;color:var(--muted);text-align:center;margin:18px 0 0}.notice b{color:#d9e9df}.round-spot{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:20px 0}.spot{background:#0d1822;border:1px solid #344555;padding:17px 10px;text-align:center;border-radius:15px}.spot .big{display:block;font-size:1.5rem;letter-spacing:-.06em;font-weight:950;color:var(--lime)}.spot .small{font-size:.73rem;color:#b5c2cd}.clock-panel{text-align:center;border:1px solid #3b4c5e;border-radius:18px;background:#101b27;padding:25px 10px;margin-top:17px}.timer{font-size:clamp(3.4rem,12vw,5.6rem);letter-spacing:-.07em;font-variant-numeric:tabular-nums;font-weight:950;line-height:1.2}.timer.ending{color:var(--pink)}.clock-tip{font-size:.83rem;color:var(--muted)}.guide{margin-top:21px;padding:15px;border-left:4px solid var(--lime);background:#1e3032;border-radius:0 12px 12px 0;color:#d8e9e2;font-size:.87rem}.vote-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}.vote{display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;background:#101a25;color:#e7eff4;border:1px solid #374b59;border-radius:13px;padding:15px;min-height:62px;font-weight:800;overflow-wrap:anywhere}.vote.selected{border-color:var(--lime);background:#26372e}.vote .check{flex-shrink:0;width:23px;height:23px;display:grid;place-items:center;background:#253444;border:1px solid #6f8395;border-radius:7px}.vote.selected .check{background:var(--lime);color:#142016;border-color:var(--lime)}.vote:disabled{opacity:.5}.result-hero{text-align:center;padding:16px 0 12px}.result-hero h2{font-size:clamp(1.95rem,7vw,3.2rem);line-height:1.04;letter-spacing:-.05em;margin:8px 0}.result-hero p{color:var(--muted);margin:0}.result-hero.won h2{color:var(--lime)}.result-hero.lost h2{color:var(--pink)}.result-word{text-align:center;border:1px dashed #64788b;background:#111e29;border-radius:12px;padding:13px;margin:15px 0 23px}.result-word strong{font-size:1.3rem;color:var(--lime)}.results{display:grid;gap:8px}.result-player{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border:1px solid #394b58;border-radius:12px;background:#14212d}.result-player .r-name{font-weight:750;overflow-wrap:anywhere}.tag{font-size:.68rem;letter-spacing:.04em;font-weight:900;text-transform:uppercase;padding:6px 9px;border-radius:7px;white-space:nowrap}.tag.crew{background:#2d4732;color:#daf6c5}.tag.impostor{background:#57323e;color:#ffc7c3}.section-label{font-size:.75rem;font-weight:900;color:#b5c2cd;letter-spacing:.15em;text-transform:uppercase;margin:22px 0 9px}.scoreline{display:flex;gap:10px;margin-top:15px}.scoreline>div{flex:1;background:#101b26;padding:11px;text-align:center;border-radius:12px;border:1px solid #324553}.scoreline strong{display:block;font-size:1.5rem}.scoreline span{font-size:.72rem;color:var(--muted)}.tiny-btn{background:transparent;border:0;color:#a6bbca;padding:8px 0;font-weight:700;text-decoration:underline}.center{text-align:center}.small-space{margin-top:12px}.vote-msg{font-size:.83rem;color:#cad8e2;margin:13px 0 0}.subhead{color:#d0dce4;text-align:center;font-size:.92rem}.select-highlight{color:var(--lime);font-weight:900}.stage .btn-row{margin-top:21px}@media(max-width:820px){.landing{grid-template-columns:1fr;gap:12px;margin-top:14px}.hero{padding:10px 0 0}.hero h1{max-width:600px}.hero .graphic{display:none}.hero .lede{max-width:650px}.setup{max-width:650px;width:100%;margin:7px auto 0}.features{margin:15px 0}.footer{margin-top:28px}}@media(max-width:480px){.app-shell{width:min(100% - 25px,1120px)}.topbar{padding-top:17px}.top-hint{font-size:.72rem}.hero h1{font-size:clamp(3.3rem,13.7vw,4.2rem);margin:16px 0}.hero .lede{font-size:.96rem}.setup{padding:18px;border-radius:18px}.field-grid{gap:9px}.field-grid .field label{font-size:.8rem}.select{padding:10px 7px}.feature{padding:6px 8px;font-size:.72rem}.stage{margin:27px auto}.stage-card{padding:19px}.btn-row{flex-direction:column}.vote-grid{gap:8px}.vote{padding:11px;font-size:.88rem}.round-spot{gap:7px}.spot{padding:12px 4px}.spot .big{font-size:1.2rem}.footer{font-size:.7rem}.result-player{padding:10px}.stage-head h1{font-size:2.25rem}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+  
+/* v2: controles táctiles, pantallas compactas y accesibilidad */
+[hidden]{display:none!important}
+#stage-title:focus{outline:none}
+.highlight{color:var(--lime)}
+.exit-wrap{text-align:center;margin:17px 0 0}
+.exit-link{font-size:.8rem;padding:10px 15px;min-height:40px;color:#c4d0d6}
+.rules{margin-top:18px;border-top:1px solid #314050;padding-top:16px;font-size:.84rem;color:#cedae2}
+.rules summary{font-weight:800;color:#e4f3e5;cursor:pointer;list-style-position:inside;padding:7px 0}
+.rules ol{padding-left:21px;line-height:1.55}
+.rules li{margin:9px 0}
+.rules strong{color:#f5f8f5}
+.custom-area{min-height:120px}
+.secret-hold{touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:contain;min-height:70px;border:1px solid #7796a4;background:#29404d;color:#fff}
+.secret-hold:active{background:#345365;transform:none}
+.accessibility-reveal{margin-top:15px;font-size:.76rem;min-height:34px}
+#role-help{min-height:34px}
+.result-symbol{font-size:2.2rem;color:var(--lime);font-weight:900}
+.result-hero.lost .result-symbol{color:var(--pink)}
+#custom-wrap small{display:block;margin-top:7px}
+.stage .stage-head p{max-width:540px;margin:0 auto}
+.stage-head h1{hyphens:auto}
+.btn{line-height:1.3;text-align:center}
+.feature{white-space:nowrap}
+@media(max-width:820px){
+  .hero h1{font-size:clamp(3rem,10vw,4.5rem);margin:12px 0}
+  .hero .lede{line-height:1.45;margin:0}
+  .landing{gap:5px}
+}
+@media(max-width:480px){
+  body{background:radial-gradient(ellipse 110% 22% at 10% -3%,#403021 0,transparent 72%),var(--bg)}
+  .topbar{padding:14px 0 8px}
+  .top-hint{font-size:.62rem;text-align:right;max-width:125px}
+  .brand{font-size:.93rem}
+  .brand-icon{width:32px;height:32px}
+  .hero{padding:5px 0 0}
+  .hero h1{font-size:clamp(2.45rem,10.5vw,3.3rem);line-height:.95;margin:11px 0}
+  .hero .lede{font-size:.88rem;line-height:1.4}
+  .hero .pill{padding:6px 9px;font-size:.6rem;letter-spacing:.09em}
+  .hero .features{margin:12px 0 7px;gap:5px}
+  .hero .feature{padding:5px 7px;font-size:.65rem}
+  .setup{margin:4px auto 0;padding:18px}
+  .helper{margin:5px 0 14px}
+  .panel-title h2{font-size:1.31rem}
+  .mini-id{font-size:.57rem;letter-spacing:.06em;text-align:right}
+  .field{margin-top:13px}
+  .textarea{min-height:155px}
+  .stage{margin:14px auto 28px}
+  .stage-head{margin-bottom:17px}
+  .stage-head h1{font-size:2rem;margin:9px 0 6px}
+  .stage-head p{font-size:.85rem}
+  .stage-card{padding:18px 16px}
+  .player-name{font-size:clamp(2.1rem,10vw,3.3rem);margin:6px 0 13px}
+  .progress{margin:12px 0 16px}
+  .hidden-card,.role-card{min-height:205px}
+  .secret-hold{min-height:62px}
+  .btn-row{flex-direction:row}
+  .btn-row .btn{padding:12px 9px;font-size:.83rem}
+  .vote{min-height:62px}
+  .guide{font-size:.83rem}
+  .footer{margin-top:20px;padding-bottom:22px}
+}
+@media(max-width:345px){.field-grid{grid-template-columns:1fr}.hero .feature:last-child{display:none}.top-hint{display:none}}
+
+  /* La edición de la casa: cálida como una barra, sospechosa como la sobremesa. */
+  .brand-caption{display:block;font-size:.6rem;letter-spacing:.16em;font-weight:750;color:#b6a48e;margin-top:1px}
+  .brand-lockup{display:flex;flex-direction:column;line-height:1}
+  .host-label{color:var(--lime);font-weight:900;letter-spacing:.14em;text-transform:uppercase;font-size:.7rem}
+  .host-check{display:flex;align-items:flex-start;gap:11px;cursor:pointer;padding:13px;border:1px solid #68513a;border-radius:13px;background:#281f1a}
+  .host-check input{accent-color:var(--lime);width:18px;height:18px;flex:0 0 auto;margin:2px 0 0}
+  .host-check span{display:block;color:#e8d8c0;font-weight:700;font-size:.84rem;line-height:1.45}
+  .host-check small{display:block;color:#ae9d8e;font-weight:400;font-size:.75rem;margin-top:3px}
+  .roast{color:#e6c28b;text-align:center;font-size:.9rem;line-height:1.5;margin:0 auto 16px;max-width:470px;font-weight:600;font-style:italic}
+  /* Visible desde el reparto hasta el resultado, incluso cuando la palabra está tapada. */
+  .round-category{position:sticky;top:7px;z-index:5;display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;max-width:100%;margin:14px 0 15px;padding:11px 14px;border:1px solid #b0884f;border-radius:13px;background:#302719;color:#f7e1b8;text-align:center;box-shadow:0 8px 24px #0a1018c7}
+  .round-category span{font-size:.63rem;font-weight:900;letter-spacing:.13em;color:#d4bb93}
+  .round-category strong{font-size:1.02rem;color:#ffdc93;letter-spacing:-.02em;overflow-wrap:anywhere}
+  .round-category::before{content:'⌗';color:#e3b66f;font-size:1.25rem;font-weight:900;line-height:1}
+
+  .banter{border:1px solid #54432f;background:#29231f;padding:13px 15px;border-radius:12px;color:#efd4a7;font-size:.87rem;margin:16px 0 0;text-align:center}
+  .banter strong{color:#ffe1a9}
+  .hero .lede strong{color:#f4dfb8}
+  .hero h1{max-width:660px}
+  .role-card.crew{background:#363324;border-color:#96804e}
+  .role-card.crew .role-word{color:#ffda8a}
+  .guide{background:#2b2722;color:#e7d9bf}
+  @media(max-width:480px){.brand-caption{font-size:.52rem}.roast{font-size:.85rem}.banter{font-size:.82rem}.round-category{padding:10px 11px;gap:7px}.round-category strong{font-size:.94rem}.round-category span{font-size:.58rem}}
+  </style>
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar"><div class="brand"><span class="brand-icon" aria-hidden="true">?</span><span class="brand-lockup">HORATIO’S<span class="brand-caption">EL IMPOSTOR · EDICIÓN DE LA CASA</span></span></div><span class="top-hint">UN MÓVIL · CERO COARTADAS</span></header>
+  <main id="app" aria-live="polite"></main>
+  <footer class="footer"><span>Sin registros · Sin anuncios · Sin tonterías</span><span><strong>«La última y nos vamos»</strong>. Sí, claro.</span></footer>
+</div>
+<script>
+'use strict';
+// Toda la partida ocurre en este navegador: no hay red, cuentas ni datos externos.
+const BANK = {
+  'Comida': ['Pizza','Tortilla de patatas','Sushi','Hamburguesa','Croqueta','Paella','Chocolate','Helado','Palomitas','Tacos','Sandía','Queso','Churros','Ceviche','Lasaña','Café','Aguacate','Sopa','Donut','Gazpacho','Ramen','Bocadillo','Galleta','Miel','Empanada'],
+  'Lugares': ['Aeropuerto','Playa','Biblioteca','Supermercado','Hospital','Discoteca','Museo','Cine','Castillo','Estadio','Camping','Escuela','Oficina','Parque de atracciones','Gimnasio','Restaurante','Tren','Piscina','Hotel','Estación de metro','Farmacia','Zoológico','Ayuntamiento','Puerto','Peluquería'],
+  'Objetos': ['Paraguas','Espejo','Mochila','Martillo','Almohada','Cepillo de dientes','Gafas de sol','Llave','Reloj','Tijeras','Microondas','Maleta','Linterna','Auriculares','Sartén','Escoba','Candado','Bicicleta','Ventilador','Cámara','Sacacorchos','Termo','Calculadora','Candela','Botella'],
+  'Animales': ['Delfín','León','Pingüino','Pulpo','Jirafa','Tiburón','Hormiga','Canguro','Búho','Camaleón','Panda','Murciélago','Cocodrilo','Mariposa','Caballo','Gorila','Koala','Flamenco','Erizo','Lobo','Nutria','Mapache','Hipopótamo','Medusa','Lémur'],
+  'Cultura y ocio': ['Karaoke','Concierto','Videojuego','Festival','Teatro','Novela','Circo','Película','Danza','Fotografía','Magia','Podcast','Carnaval','Cómic','Fiesta sorpresa','Escape room','Pintura','Ópera','Feria','Disfraz','Ajedrez','Origami','Mímica','Puzle','Monólogo'],
+  'Profesiones': ['Bombero','Dentista','Piloto','Panadero','Astronauta','Periodista','Carpintero','Veterinario','Cocinero','Juez','Arquitecto','Fotógrafo','Profesor','Mecánico','Peluquero','Socorrista','Camarero','Electricista','Jardinero','Detective','Enfermero','Taxista','Biólogo','Traductor','Guardabosques'],
+  'Tecnología': ['WiFi','Contraseña','Robot','Dron','Videollamada','Aplicación','Impresora','Teclado','Satélite','Inteligencia artificial','GPS','Batería','Pantalla','Código QR','Altavoz','Memoria USB','Cargador','Emoji','Ratón','Tableta','Videoconsola','Pantalla táctil','Servidor','Cámara web','Router'],
+  'Deportes': ['Fútbol','Baloncesto','Tenis','Natación','Boxeo','Ciclismo','Surf','Esquí','Atletismo','Voleibol','Yoga','Bádminton','Golf','Escalada','Patinaje','Maratón','Karate','Béisbol','Hípica','Ping-pong','Rugby','Esgrima','Waterpolo','Triatlón','Snowboard'],
+  'Naturaleza': ['Volcán','Desierto','Cascada','Tormenta','Arcoíris','Bosque','Isla','Montaña','Lago','Río','Cueva','Nieve','Luna','Sol','Océano','Terremoto','Cactus','Glaciar','Jungla','Huracán','Aurora boreal','Acantilado','Arrecife','Pantano','Géiser']
+  , 'Música': ['Guitarra','Piano','Metrónomo','Violín','Trompeta','Saxofón','Flauta','Concierto acústico','Orquesta','Ritmo','Melodía','Ukelele','Micrófono','DJ','Vinilo','Partitura','Ópera rock','Reguetón','Jazz','Blues','Rap','Rock','Pop','Coro','Campana']
+  , 'Viajes': ['Pasaporte','Maleta de mano','Embarque','Tren nocturno','Hostal','Turismo rural','Safari','Crucero','Ferry','Excursión','Mapa','Aduana','Billete','Turista','Guía','Mochilero','Souvenir','Visado','Escapada','Monumento','Ruta','Aventura','Autobús','Taxi','Caravana']
+  , 'Vida cotidiana': ['Despertador','Siesta','Ducha','Lavadora','Factura','Cumpleaños','Ascensor','Compras','Mudanza','Limpieza','Cocinar','Reunión','Examen','Deberes','Vecino','Mascota','Cita','Llamada','Mensaje','Regalo','Llaves','Desayuno','Paseo','Basura','Colada']
+  , 'La barra de Horatio’s': ['Cerveza','Pinta','Barril','Tercio','Caña','Espuma','Brindis','Resaca','Posavasos','Nevera','Terraza','Taburete','Barra','Ronda','Grifo','Vaso','Botellín','Chupito','Aperitivo','Aceitunas','Sacacorchos','Hielo','Propina','Servilleta','Almendras']
+  , 'Catan y traiciones': ['Ladrillo','Oveja','Trigo','Madera','Mineral','Ladrón','Camino','Poblado','Ciudad','Puerto','Desierto','Dados','Comercio','Caballero','Carta','Recursos','Alianza','Intercambio','Victoria','Traición','Bosque','Pastos','Montaña','Monopolio','Negociación']
+  , 'Tertulia de barra': ['OTAN','Frontera','Elecciones','Ministro','Diplomacia','Acuerdo','Embajador','Sanciones','Parlamento','Derbi','VAR','Árbitro','Penalti','Eurocopa','Referéndum','Debate','Cumbre','Tratado','Veto','Campaña','Tertulia','Geopolítica','Portavoz','Conspiración','Fútbol']
+  , 'Informáticos al borde': ['Router','Compilador','Firewall','Algoritmo','Contraseña','Bug','Servidor','Copia de seguridad','Deploy','Commit','GitHub','Teclado','VPN','Terminal','Script','Actualización','Bluetooth','Sistema operativo','Pendrive','Antivirus','Código','Nube','Error 404','Inteligencia artificial','Píxel']
+  , 'Adultos funcionales (a ratos)': ['Hipoteca','Hacienda','Resaca','Factura','Seguro','Multa','Alquiler','Vecino','Suegra','Agujetas','Termostato','Digestión','Lumbago','Siesta','Burocracia','Reunión','Café','Divorcio','Gimnasio','Supermercado','IRPF','Madrugada','Ibuprofeno','Factura de la luz','Aspiradora']
+};
+
+const PREFS_KEY = 'el-impostor-settings-horatios-v3';
+const SESSION_KEY = 'el-impostor-session-v2';
+const DEFAULTS = {names:'Allan\nIván (El Míster)\nHoracio\nMark\nTinguaro',impostors:1,category:'Todas',minutes:3,customWords:'',horatiosMode:true};
+const app = document.getElementById('app');
+const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const normalize = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('es').trim();
+function loadPrefs(){
+  try {
+    const v=JSON.parse(localStorage.getItem(PREFS_KEY)||localStorage.getItem('el-impostor-settings-v2')||localStorage.getItem('el-impostor-settings-v1')||'{}');
+    // Solo actualizamos los antiguos nombres genéricos. Los nombres que ya escribió el usuario se conservan.
+    if(v.names==='Jugador 1\nJugador 2\nJugador 3\nJugador 4\nJugador 5')v.names=DEFAULTS.names;
+    return {...DEFAULTS,...v};
+  }
+  catch {return {...DEFAULTS}}
+}
+function writePrefs(cfg){try{localStorage.setItem(PREFS_KEY,JSON.stringify(cfg))}catch{}}
+function initialState(){return {screen:'setup',config:loadPrefs(),players:[],impostorIds:[],word:'',roundCategory:'',round:0,starter:'',active:0,visible:false,seen:false,seconds:0,deadline:0,paused:false,timerId:null,selected:new Set(),scores:{team:0,impostors:0},counts:[],previous:[],recent:[],win:null,error:''}}
+let state=initialState();
+function persist(){
+  if(state.screen==='setup')return;
+  try {
+    const {timerId,visible,selected,error,...snapshot}=state;
+    sessionStorage.setItem(SESSION_KEY,JSON.stringify({...snapshot,visible:false,selected:[...selected],savedAt:Date.now()}));
+  }catch{}
+}
+function loadSession(){
+  try {
+    const v=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'null');
+    if(!v || !['roles','ready','playing','vote','results'].includes(v.screen))return;
+    if(!Array.isArray(v.players)||v.players.length<3||v.players.length>16||!Array.isArray(v.impostorIds)||!v.impostorIds.length||!v.word||!v.config)return;
+    state={...state,...v,visible:false,paused:Boolean(v.paused),seen:Boolean(v.seen),selected:new Set(v.selected||[]),timerId:null,error:''};
+    // Recuperar partidas v3, que aún no guardaban la categoría de cada palabra.
+    if(!state.roundCategory)state.roundCategory=state.config.category==='Todas'?(Object.keys(BANK).find(cat=>BANK[cat].includes(state.word))||'Todas'):state.config.category;
+    if(state.screen==='playing'&&!state.paused&&state.config.minutes>0){state.seconds=Math.max(0,Math.ceil((state.deadline-Date.now())/1000));}
+  } catch {try{sessionStorage.removeItem(SESSION_KEY)}catch{}}
+}
+function clearSession(){try{sessionStorage.removeItem(SESSION_KEY)}catch{}}
+function rand(max){
+  if(max<=1)return 0;
+  if(globalThis.crypto?.getRandomValues){
+    const limit=Math.floor(4294967296/max)*max, buf=new Uint32Array(1);let n;
+    do {crypto.getRandomValues(buf);n=buf[0]} while(n>=limit);
+    return n%max;
+  }
+  return Math.floor(Math.random()*max);
+}
+function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=rand(i+1);[b[i],b[j]]=[b[j],b[i]]}return b}
+function parseNames(raw){return String(raw).split(/[\n;,]+/).map(s=>s.trim()).filter(Boolean)}
+function parseWords(raw){return [...new Map(String(raw).split(/[\n;]+/).map(s=>s.trim()).filter(Boolean).map(s=>[normalize(s),s])).values()]}
+function allWords(){return Object.values(BANK).flat()}
+function categoryWords(category,cfg){if(category==='Mi lista')return parseWords(cfg.customWords);return category==='Todas'?allWords():(BANK[category]||allWords())}
+function pickWord(category,cfg){
+  // Incluso si eligen «Todas», conservamos la categoría REAL de la palabra
+  // para que también pueda verla el impostor durante el reparto.
+  const pool=category==='Todas'
+    ?Object.entries(BANK).flatMap(([cat,words])=>words.map(word=>({word,category:cat})))
+    :categoryWords(category,cfg).map(word=>({word,category}));
+  const seen=new Set(state.recent.map(normalize));
+  let available=pool.filter(item=>!seen.has(normalize(item.word)));
+  if(!available.length){state.recent=[];available=pool}
+  const picked=available[rand(available.length)];
+  state.recent.push(picked.word);
+  if(state.recent.length>Math.max(1,pool.length-1))state.recent.shift();
+  return picked;
+}
+function pickImpostors(n,k){
+  const counts=Array.from({length:n},(_,i)=>state.counts[i]||0);
+  const ordered=shuffle([...Array(n).keys()]);
+  ordered.sort((a,b)=>(counts[a]+(state.previous.includes(a)?0.7:0))-(counts[b]+(state.previous.includes(b)?0.7:0)));
+  const chosen=ordered.slice(0,k);
+  chosen.forEach(i=>{counts[i]+=1});
+  state.counts=counts;state.previous=[...chosen];
+  return chosen;
+}
+function houseMode(){return state.config.horatiosMode!==false}
+function personalRoast(name){
+  if(!houseMode())return '';
+  const key=normalize(name);
+  let lines;
+  if(key.includes('ivan')||key.includes('mister'))lines=[
+    'Míster, tienes más títulos que una biblioteca y aun así solo te pedimos UNA puta palabra.',
+    'El Míster se puso pelo. A ver si ahora consigue injertarse un poquito de humildad.',
+    'Míster, lo de responder con una tesis doctoral déjalo para cuando se acabe la cerveza.',
+    'El Míster ya ha redactado tres papers para explicar por qué su pista es objetivamente perfecta.',
+    'Sabes de teleco, lingüística y medio planeta. Hoy prueba con lo revolucionario: hablar poco.',
+    'Míster, pelo nuevo, ego de siempre. Venga, suelta la pista, catedrático.',
+    'El Míster podría hablar seis idiomas y en los seis diría «técnicamente, no es así».',
+    'Míster: la Universidad de Horatio’s no convalida doctorados. Aquí todos somos sospechosos.'
+  ];
+  else if(key.includes('horacio'))lines=[
+    'Horacio, el Teide tiene menos erupciones que tú cuando alguien da una pista mala.',
+    'El canario de la casa: mucho mojo picón y una mala hostia que no cabe en la nevera.',
+    'Horacio, esto es El Impostor, no una rueda de prensa de la OTAN. Baja el tono, coño.',
+    'Es tu casa, Horacio, pero el derecho a cabrearte por todo no venía con la escritura.',
+    'Horacio está a dos pistas malas de declarar la independencia de su salón.',
+    'Mitad Canarias, mitad Bulgaria, cien por cien posibilidad de bronca si le lleváis la contraria.',
+    'Horacio: tienes permiso para acusar. Para montar un incidente diplomático, todavía no.',
+    'Si la palabra es «paciencia», que alguien le cambie discretamente la tarjeta a Horacio.'
+  ];
+  else if(key.includes('tinguaro'))lines=[
+    'Tinguaro, el Catan te parece complicado, pero Laura lleva años esperando que confirmes el «sí, acepto».',
+    'Tinguaro, la boda con Laura no es un bug. No se arregla reiniciando el router.',
+    'El único canario que huye del Catan más rápido que del calendario de bodas.',
+    'Laura ha abierto un ticket: «Fecha de boda pendiente». Tinguaro lo ha movido a backlog.',
+    'Tinguaro, dejar de jugar al Catan no te libra de negociar. Pregúntale a Laura.',
+    'Tinguaro, ¿para el «sí, quiero» también necesitas tres sprints y un entorno de pruebas?',
+    'Tinguaro es informático: cuando alguien menciona una oveja de Catan, pide abrir un issue.',
+    'El canario rebelde: programa de puta madre, pero una partida de Catan le da alergia.'
+  ];
+  else if(key.includes('mark'))lines=[
+    'Mark, desde tu altura se ve hasta el Kremlin. No hace falta que nos cuentes la palabra.',
+    'Mark, eres tan alto que hasta Putin tendría que levantar la cabeza para discutirte.',
+    'El ucraniano más alto de Horatio’s. Entre eso y el francés, ya tienes tres ventajas sospechosas.',
+    'Mark, baja al nivel de la mesa. Aquí abajo los demás también queremos jugar.',
+    'Mark sabe ucraniano, francés y belga de barra. A ver si hoy domina el idioma de no chivarse.',
+    'Mark, no señales a nadie desde ahí arriba, que eso parece una resolución del Consejo de Seguridad.',
+    'Mark, el Kremlin te ve por satélite sin hacer zoom. Procura que la pista sea discreta.',
+    'Mark es el único padre del grupo: por fin un juego donde puede mentir sin decir «cinco minutos más».'
+  ];
+  else if(key.includes('allan'))lines=[
+    'Allan, el latino de la mesa: mucho carácter, pero para verle la cara a Mark necesita un taburete.',
+    'Allan es el más bajito. Si la pista está por las nubes, que se la baje Mark.',
+    'Allan, aquí la palabra clave no se posiciona en Google. Y tú tampoco llegas al estante de arriba.',
+    'El latino más pequeño de Horatio’s. Eso sí, la coartada suele venir tamaño XL.',
+    'Allan, hoy nada de auditorías: para detectar al impostor no hace falta sacar una GeoGrid, joder.',
+    'Allan: mide poco, sospecha mucho y cree que puede optimizar hasta una resaca.',
+    'Si alguien dice «altura», Allan queda descartado. Salvo que haya pillado un taburete.',
+    'Allan, entre el SEO y las cervezas vas a acabar posicionando «bajito con mala leche» en el top 3.'
+  ];
+  else lines=[
+    'Aquí no se viene a quedar bien. Se viene a sospechar de todo el mundo.',
+    'Una sola pista, artista. El discurso de boda te lo ahorras.'
+  ];
+  return lines[rand(lines.length)];
+}
+const HOUSE_BANTER_WIN=[
+  'Hostia, habéis acertado. Habrá que avisar a la comunidad científica.',
+  'Caso resuelto. El Míster está redactando un paper y Horacio ya dice que él lo sabía.',
+  'La democracia de barra ha funcionado. Que alguien lo apunte antes de la siguiente cerveza.',
+  'Impostor pillado. Las neuronas de Horatio’s han fichado por primera vez en toda la noche.',
+  'Ni el VAR ni la OTAN: bastaba con escuchar al que soltaba más tonterías.',
+  'Habéis acertado pese a todo. Esto sí que merece un brindis, coño.',
+  'Entre tanto ingeniero, informático y tertuliano, por una vez ha ganado el sentido común.',
+  'Bien jugado. El siguiente que dé una pista de mierda invita a la primera ronda.'
+];
+const HOUSE_BANTER_LOSE=[
+  'Joder, si os meten al impostor en la nevera acabáis pidiéndole otra cerveza.',
+  'El Míster tiene doctorados, Horacio tiene teorías geopolíticas… y os han tomado por gilipollas.',
+  'Os han vendido una oveja de Catan y habéis pagado con la cosecha entera.',
+  'Tanta tecnología, tanta geopolítica y no sabéis detectar a un tío inventándose una pista.',
+  'La investigación ha sido un desastre. Horacio ya tiene a quién echarle la bronca.',
+  'Entre los cinco sumáis idiomas para media ONU. Qué pena que ninguno sea el de la lógica.',
+  'La inteligencia colectiva se ha ido a por tabaco. Volverá después de la próxima caña.',
+  'Os han hecho un traje. De los gordos. Allan tendrá que pedirlo en talla pequeña.'
+];
+function houseBanter(won){if(!houseMode())return '';const lines=won?HOUSE_BANTER_WIN:HOUSE_BANTER_LOSE;return `<p class="banter">${esc(lines[rand(lines.length)])}</p>`}
+function visibleCategory(){return state.roundCategory==='Mi lista'?'Palabras de la casa':(state.roundCategory||state.config.category||'Sin definir')}
+function categoryBanner(){return `<div class="round-category" role="note" aria-label="Categoría de esta ronda"><span>CATEGORÍA</span><strong>${esc(visibleCategory())}</strong></div>`}
+function pill(s){return `<span class="pill"><span class="dot"></span>${esc(s)}</span>`}
+function header(kicker,title,desc){return `<header class="stage-head">${pill(kicker)}<h1 tabindex="-1" id="stage-title">${esc(title)}</h1><p>${esc(desc)}</p></header>`}
+function navigate(){window.scrollTo(0,0);const h=document.getElementById('stage-title');if(h)h.focus({preventScroll:true})}
+function haltTimer(){if(state.timerId!==null){clearInterval(state.timerId);state.timerId=null}}
+function render(){haltTimer();
+  if(state.screen==='setup')renderSetup();
+  else if(state.screen==='roles')renderRoles();
+  else if(state.screen==='ready')renderReady();
+  else if(state.screen==='playing')renderPlaying();
+  else if(state.screen==='vote')renderVote();
+  else if(state.screen==='results')renderResults();
+  persist();
+}
+function go(screen){state.screen=screen;render();navigate()}
+function abandon(){
+  hideSecret();
+  if(!confirm('¿Abandonas la mesa? Se perderá el marcador de esta sesión.'))return;
+  haltTimer();clearSession();state=initialState();render();navigate();
+}
+function exitButton(){return `<button id="leave-game" type="button" class="tiny-btn exit-link">Abandonar la mesa</button>`}
+function wireExit(){document.getElementById('leave-game')?.addEventListener('click',abandon)}
+function renderSetup(){
+  const cfg=state.config;
+  const cats=['Todas',...Object.keys(BANK),'Mi lista'];
+  app.innerHTML=`<div class="landing">
+  <section class="hero">${pill('La mesa de Horatio’s · Edición sin coartadas')}<h1>MUCHA BOCA. <span>POCA COARTADA.</span></h1><p class="lede">Una palabra secreta, unas cuantas pistas y un listo que <strong>no tiene ni puta idea</strong> de qué habláis. Vamos, una sobremesa cualquiera en Horatio’s.</p><div class="features"><span class="feature">3–16 sospechosos</span><span class="feature">${allWords().length} palabras</span><span class="feature">Sin anuncios. Con acusaciones.</span></div><div class="graphic" aria-hidden="true"><div class="glow"></div><div class="poster-shadow"></div><div class="poster"><div class="q">?</div></div><div class="seal">NO TE CREO</div></div></section>
+  <section class="setup" aria-label="Configuración de la partida"><div class="panel-title"><h2>Sentad a los sospechosos</h2><span class="mini-id">PROHIBIDO CHIVARSE</span></div><p class="helper">Pasad el móvil sin hacer trampas. Lo de discutir viene incluido.</p>
+  <form id="game-form" novalidate><div class="field"><label for="names">La banda <span class="sub-label">(uno por línea)</span></label><textarea class="textarea" id="names" name="names" spellcheck="false" maxlength="550" placeholder="Ana&#10;Pablo&#10;Marta">${esc(cfg.names)}</textarea><small>Vienen los cinco de la casa. Puedes cambiar los nombres o añadir más hasta 16.</small></div>
+  <div class="field-grid"><div class="field"><label for="impostors">Impostores</label><select class="select" id="impostors" name="impostors">${[1,2,3].map(n=>`<option value="${n}" ${Number(cfg.impostors)===n?'selected':''}>${n} impostor${n===1?'':'es'}</option>`).join('')}</select></div><div class="field"><label for="minutes">Tiempo</label><select class="select" id="minutes" name="minutes">${[[0,'Sin límite'],[2,'2 min'],[3,'3 min'],[5,'5 min'],[8,'8 min']].map(([n,t])=>`<option value="${n}" ${Number(cfg.minutes)===n?'selected':''}>${t}</option>`).join('')}</select></div></div>
+  <div class="field"><label for="category">De qué demonios vamos a hablar</label><select class="select" id="category" name="category">${cats.map(n=>`<option value="${esc(n)}" ${n===cfg.category?'selected':''}>${esc(n)}</option>`).join('')}</select></div>
+  <div class="field" id="custom-wrap" ${cfg.category==='Mi lista'?'':'hidden'}><label for="custom">Tus palabras <span class="sub-label">(una por línea, mínimo 5)</span></label><textarea class="textarea custom-area" id="custom" name="custom" maxlength="5000" placeholder="Tiburón&#10;Biblioteca&#10;Chocolate&#10;Paraguas&#10;Aeropuerto">${esc(cfg.customWords||'')}</textarea><small>Solo se usarán tus palabras. Se guardan en este dispositivo.</small></div>
+  <div class="field"><label class="host-check" for="horatiosMode"><input id="horatiosMode" name="horatiosMode" type="checkbox" ${cfg.horatiosMode!==false?'checked':''}><span>Activar las pullas de Horatio’s<small>Chistes y comentarios personalizados. Desmárcalo si sois gente seria (qué aburrimiento).</small></span></label></div>
+  ${state.error?`<div class="error" role="alert">${esc(state.error)}</div>`:''}
+  <button class="btn btn-primary btn-wide" type="submit">Repartir el marrón <span aria-hidden="true">→</span></button></form>
+  <details class="rules"><summary>Reglamento oficial de esta panda</summary><ol><li>Cada participante descubre en secreto si conoce la palabra o es el impostor.</li><li>Por turnos, todos dicen <strong>una pista relacionada</strong>, sin pronunciar la palabra ni repetir pistas.</li><li>Debatid y votad por los sospechosos.</li><li>Si descubrís a <strong>todos</strong> los impostores, gana el equipo. Si alguno escapa, ganan los impostores.</li></ol></details>
+  </section></div>`;
+  const form=document.getElementById('game-form');
+  form.querySelector('#category').addEventListener('change',e=>{document.getElementById('custom-wrap').hidden=e.target.value!=='Mi lista'});
+  form.addEventListener('submit',e=>{
+    e.preventDefault();const els=form.elements;
+    const cfg={names:els.namedItem('names').value,impostors:Number(els.namedItem('impostors').value),minutes:Number(els.namedItem('minutes').value),category:els.namedItem('category').value,customWords:els.namedItem('custom').value,horatiosMode:els.namedItem('horatiosMode').checked};
+    state.config=cfg;writePrefs(cfg);
+    const players=parseNames(cfg.names);let error='';
+    if(players.length<3||players.length>16)error='Introducid entre 3 y 16 jugadores.';
+    else if(new Set(players.map(normalize)).size!==players.length)error='Hay nombres repetidos. Cada jugador necesita uno diferente.';
+    else if(players.some(x=>x.length>35))error='Cada nombre debe tener 35 caracteres o menos.';
+    else if(cfg.impostors>players.length-2)error='Deben quedar al menos dos jugadores que conozcan la palabra.';
+    else if(cfg.category==='Mi lista'&&parseWords(cfg.customWords).length<5)error='Añade al menos cinco palabras diferentes a tu lista.';
+    else if(cfg.category==='Mi lista'&&parseWords(cfg.customWords).some(x=>x.length>55))error='Las palabras de tu lista deben tener menos de 56 caracteres.';
+    if(error){state.error=error;renderSetup();return;}
+    state.error='';state.scores={team:0,impostors:0};state.counts=[];state.previous=[];state.recent=[];state.round=0;
+    startRound(players,cfg);
+  });
+}
+function startRound(players,cfg){
+  haltTimer();state.players=[...players];state.config={...cfg};state.round++;
+  const picked=pickWord(cfg.category,cfg);
+  state.word=picked.word;state.roundCategory=picked.category;
+  state.impostorIds=pickImpostors(players.length,cfg.impostors);
+  state.starter=players[rand(players.length)];
+  state.active=0;state.visible=false;state.seen=false;state.selected=new Set();state.win=null;
+  state.seconds=cfg.minutes*60;state.deadline=0;state.paused=false;
+  go('roles');
+}
+function roleHTML(){const impostor=state.impostorIds.includes(state.active);
+  return `<div class="role-card ${impostor?'impostor':'crew'}" id="secret-card" hidden aria-label="Tarjeta confidencial"><div class="role-kicker">${impostor?'TU PAPEL':'TU PALABRA'}</div><div class="role-word">${impostor?'ERES EL IMPOSTOR':esc(state.word)}</div><div class="role-desc">${impostor?houseMode()?'No sabes de qué hablan, pero eso nunca ha impedido opinar en esta mesa. Vende humo con elegancia.':'No conoces la palabra. Escucha a los demás e improvisa una pista creíble.':houseMode()?'Sabes la palabra. Ahora demuestra que puedes dar una pista sin montar una conferencia.':'Solo tú puedes mirar esta tarjeta. Da una pista sin decir la palabra.'}</div></div>`
+}
+function showSecret(){
+  if(state.screen!=='roles')return;
+  const hidden=document.getElementById('hidden-card'),secret=document.getElementById('secret-card');
+  if(!hidden||!secret)return;
+  state.visible=true;state.seen=true;hidden.hidden=true;secret.hidden=false;
+  document.getElementById('role-help').textContent='Oculta la tarjeta antes de continuar.';
+  const next=document.getElementById('next-role');if(next)next.disabled=true;
+  persist();
+}
+function hideSecret(){
+  if(state.screen!=='roles'||!state.visible)return;
+  state.visible=false;const hidden=document.getElementById('hidden-card'),secret=document.getElementById('secret-card');
+  if(hidden)hidden.hidden=false;if(secret)secret.hidden=true;
+  const next=document.getElementById('next-role');if(next)next.disabled=!state.seen;
+  const help=document.getElementById('role-help');if(help)help.textContent='Tarjeta oculta. Ya puedes pasar el móvil.';
+  const acces=document.getElementById('accessible-reveal');if(acces)acces.textContent='Mostrar tarjeta sin mantener pulsado';
+  persist();
+}
+function renderRoles(){
+  const name=state.players[state.active],n=state.players.length;
+  const progress=state.players.map((_,i)=>`<span class="${i<state.active?'done':i===state.active?'current':''}"></span>`).join('');
+  app.innerHTML=`<div class="stage">${header(`Ronda ${state.round} · Reparto`, 'Solo para tus ojos', houseMode()?'Aquí hasta el dueño de la casa es sospechoso.':'Asegúrate de que los demás no estén mirando.')}
+  <section class="stage-card"><div class="turn-label">Jugador ${state.active+1} de ${n}</div><h2 class="player-name">${esc(name)}</h2>${houseMode()?`<p class="roast">${esc(personalRoast(name))}</p>`:''}${categoryBanner()}<div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="${n}" aria-valuenow="${state.active+1}" aria-label="Jugadores que han recibido su papel">${progress}</div>
+  <div class="hidden-card" id="hidden-card"><div><div class="symbol">?</div><p>La <strong>categoría sí se puede ver</strong>. Tu palabra o papel, no. Que los demás no sean unos cotillas.</p></div></div>${roleHTML()}
+  <button id="hold-reveal" type="button" class="btn btn-secondary btn-wide small-space secret-hold" aria-label="Mantén pulsado para mostrar tu papel">Mantén pulsado para ver <span aria-hidden="true">◉</span></button>
+  <p class="notice" aria-live="polite" id="role-help">${state.seen?'Ya has visto tu papel.':'Mantén el botón pulsado. Al soltarlo, la tarjeta se oculta.'}</p>
+  <button id="next-role" type="button" class="btn btn-primary btn-wide small-space" ${state.seen?'':'disabled'}>${state.active===n-1?'Terminar reparto':'Ocultar y pasar a la siguiente persona'} →</button>
+  <button id="accessible-reveal" type="button" class="tiny-btn btn-wide accessibility-reveal" aria-label="Mostrar u ocultar la tarjeta mediante toque">Mostrar tarjeta sin mantener pulsado</button></section><div class="exit-wrap">${exitButton()}</div></div>`;
+  const hold=document.getElementById('hold-reveal');
+  hold.addEventListener('pointerdown',e=>{if(e.button!==0)return;e.preventDefault();try{hold.setPointerCapture(e.pointerId)}catch{}showSecret()});
+  for(const evt of ['pointerup','pointercancel','lostpointercapture'])hold.addEventListener(evt,hideSecret);
+  hold.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showSecret()}});
+  hold.addEventListener('keyup',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();hideSecret()}});
+  document.getElementById('accessible-reveal').addEventListener('click',e=>{if(state.visible)hideSecret();else{showSecret();e.currentTarget.textContent='Ocultar tarjeta'}});
+  document.getElementById('next-role').addEventListener('click',()=>{
+    if(!state.seen||state.visible)return;
+    if(state.active<n-1){state.active++;state.visible=false;state.seen=false;render();navigate()}
+    else go('ready');
+  });
+  wireExit();
+}
+function renderReady(){
+  app.innerHTML=`<div class="stage">${header(`Ronda ${state.round}`, houseMode()?'Que empiece el puto circo':'Todos preparados', houseMode()?'Los papeles están repartidos. El sentido común sigue en paradero desconocido.':'Los papeles ya están repartidos. Empieza el juego.')}
+  <section class="stage-card">${categoryBanner()}<div class="turn-label">Empieza hablando</div><h2 class="player-name highlight">${esc(state.starter)}</h2>
+  <div class="guide">Por orden, cada jugador dice <strong>una palabra relacionada</strong> con el concepto secreto. El impostor tendrá que inventarse una pista. Podéis dar varias vueltas. <strong>${houseMode()?"Míster: una pista no necesita bibliografía.":""}</strong></div>
+  <div class="round-spot"><div class="spot"><span class="big">${state.players.length}</span><span class="small">jugadores</span></div><div class="spot"><span class="big">${state.impostorIds.length}</span><span class="small">impostor${state.impostorIds.length===1?'':'es'}</span></div><div class="spot"><span class="big">${state.config.minutes===0?'∞':state.config.minutes+' min'}</span><span class="small">debate</span></div></div>
+  <button id="start-timer" class="btn btn-primary btn-wide">Que empiece el interrogatorio →</button>
+  <p class="notice">El primer jugador se elige al azar en cada ronda.</p></section><div class="exit-wrap">${exitButton()}</div></div>`;
+  document.getElementById('start-timer').addEventListener('click',()=>{state.seconds=state.config.minutes*60;state.paused=false;state.deadline=Date.now()+state.seconds*1000;go('playing')});wireExit();
+}
+function timeStr(total){return `${String(Math.floor(total/60)).padStart(2,'0')}:${String(total%60).padStart(2,'0')}`}
+function tick(){
+  if(state.screen!=='playing'||state.paused||state.config.minutes===0)return;
+  state.seconds=Math.max(0,Math.ceil((state.deadline-Date.now())/1000));
+  const clock=document.getElementById('timer');
+  if(clock){clock.textContent=timeStr(state.seconds);clock.classList.toggle('ending',state.seconds<=30)}
+  if(state.seconds===0){haltTimer();state.paused=true;state.deadline=0;document.getElementById('clock-tip').textContent='¡Tiempo agotado! Podéis votar cuando queráis.';document.getElementById('pause').disabled=true;persist()}
+}
+function renderPlaying(){
+  const timed=state.config.minutes>0;
+  app.innerHTML=`<div class="stage">${header(`Ronda ${state.round}`, houseMode()?'Soltad la pista, cabrones.':'Hablad. Desconfiad.', houseMode()?'Una pista, una acusación y a ver quién pierde los papeles.':'Cada pista puede delatar a alguien.')}
+  <section class="stage-card">${categoryBanner()}<div class="turn-label">Tiempo para soltar barbaridades</div><div class="clock-panel"><div id="timer" class="timer ${state.seconds<=30?'ending':''}" role="timer" aria-label="Tiempo restante">${timed?timeStr(state.seconds):'∞'}</div><div class="clock-tip" id="clock-tip">${!timed?'Sin límite de tiempo':state.seconds===0?'¡Tiempo agotado! Podéis votar cuando queráis.':state.paused?'Temporizador en pausa':'Cuenta atrás para debatir'}</div></div>
+  ${timed?`<div class="btn-row"><button id="pause" class="btn btn-secondary" ${state.seconds===0?'disabled':''}>${state.paused?'Reanudar':'Pausar'} ${state.paused?'▶':'Ⅱ'}</button><button id="add-time" class="btn btn-secondary">+ 30 s</button></div>`:''}
+  <button id="vote" class="btn btn-primary btn-wide small-space">Ya hemos oído suficiente. Votar →</button>
+  <div class="guide"><strong>Normas:</strong> no digáis la palabra secreta, no enseñéis el móvil y no repitáis pistas. Al acabar, votad a quienes creáis que son impostores.</div>
+  </section><div class="exit-wrap">${exitButton()}</div></div>`;
+  if(timed){
+    if(!state.paused&&state.seconds>0){tick();if(!state.paused)state.timerId=setInterval(tick,250)}
+    document.getElementById('pause').addEventListener('click',()=>{
+      if(!state.paused){tick();state.paused=true;haltTimer()}
+      else{state.paused=false;state.deadline=Date.now()+state.seconds*1000}
+      render();
+    });
+    document.getElementById('add-time').addEventListener('click',()=>{
+      state.seconds+=30;
+      if(state.paused){state.deadline=0;}else{state.deadline=Date.now()+state.seconds*1000}
+      render();
+    });
+  }
+  document.getElementById('vote').addEventListener('click',()=>{if(timed&&!state.paused){tick();state.paused=true}go('vote')});wireExit();
+}
+function renderVote(){
+  const total=state.impostorIds.length,c=state.selected.size;
+  app.innerHTML=`<div class="stage">${header(`Ronda ${state.round} · Votación`, houseMode()?'¿Quién coño está mintiendo?':'¿Quién está fingiendo?', houseMode()?'Democracia de barra: acusad ahora, arrepentíos después.':'Poneos de acuerdo antes de revelar las identidades.')}
+  <section class="stage-card">${categoryBanner()}<div class="turn-label">Decisión del grupo</div><h2 class="subhead">Señalad ${total} sospechoso${total===1?'':'s'}. Debéis descubrirlos a todos para ganar.</h2>
+  <div class="vote-grid">${state.players.map((name,i)=>`<button class="vote ${state.selected.has(i)?'selected':''}" type="button" data-player="${i}" aria-pressed="${state.selected.has(i)}"><span>${esc(name)}</span><span class="check" aria-hidden="true">${state.selected.has(i)?'✓':''}</span></button>`).join('')}</div>
+  <p class="vote-msg" id="vote-count">Seleccionados: <strong>${c} de ${total}</strong></p>
+  <button id="confirm-vote" class="btn btn-primary btn-wide small-space" ${c===total?'':'disabled'}>Abrir el melón y descubrirlo todo →</button>
+  <button id="return-talk" class="btn btn-secondary btn-wide small-space">← Volver al debate</button>
+  <p class="notice">La palabra secreta y los impostores aparecerán al confirmar.</p></section><div class="exit-wrap">${exitButton()}</div></div>`;
+  document.querySelectorAll('[data-player]').forEach(b=>b.addEventListener('click',()=>{const i=Number(b.dataset.player);if(state.selected.has(i))state.selected.delete(i);else if(state.selected.size<total)state.selected.add(i);render();}));
+  document.getElementById('confirm-vote').addEventListener('click',()=>{
+    if(state.selected.size!==total)return;
+    state.win=state.impostorIds.every(i=>state.selected.has(i));
+    state.scores[state.win?'team':'impostors']++;
+    go('results');
+  });
+  document.getElementById('return-talk').addEventListener('click',()=>{state.paused=true;go('playing')});wireExit();
+}
+function renderResults(){
+  const success=state.win;
+  app.innerHTML=`<div class="stage">${header(`Ronda ${state.round} · Resultado`,success?(houseMode()?'Pillado, figura.':'Caso resuelto'):(houseMode()?'Os la han colado.':'El impostor se ha escapado'),success?'Habéis descubierto a todos los impostores.':'Al menos uno ha conseguido engañaros.')}
+  <section class="stage-card">${categoryBanner()}<div class="result-hero ${success?'won':'lost'}"><div class="result-symbol" aria-hidden="true">${success?'✦':'?'}</div><h2>${success?(houseMode()?'Milagro, habéis acertado.':'¡Gana el equipo!'):(houseMode()?'Vaya panda de lumbreras.':'¡Ganan los impostores!')}</h2></div>
+  ${houseBanter(success)}<div class="result-word">La palabra secreta era<br><strong>${esc(state.word)}</strong></div>
+  <div class="section-label">Identidades reveladas</div><div class="results">${state.players.map((n,i)=>`<div class="result-player"><span class="r-name">${esc(n)}${state.selected.has(i)?'<span title="Acusado por el grupo"> · ⚑</span>':''}</span><span class="tag ${state.impostorIds.includes(i)?'impostor':'crew'}">${state.impostorIds.includes(i)?'Impostor':'Conocía la palabra'}</span></div>`).join('')}</div>
+  <div class="section-label">Marcador de la sesión</div><div class="scoreline"><div><strong style="color:var(--lime)">${state.scores.team}</strong><span>Rondas del equipo</span></div><div><strong style="color:var(--pink)">${state.scores.impostors}</strong><span>Rondas de los impostores</span></div></div>
+  <p class="notice">Los impostores se reparten de forma equilibrada en las siguientes rondas.</p>
+  <button id="next-round" class="btn btn-primary btn-wide small-space">Otra ronda, cobardes →</button>
+  <button id="new-setup" class="btn btn-secondary btn-wide small-space">Cambiar la banda o las reglas</button>
+  </section></div>`;
+  document.getElementById('next-round').addEventListener('click',()=>startRound(state.players,state.config));
+  document.getElementById('new-setup').addEventListener('click',()=>{clearSession();state=initialState();render();navigate()});
+}
+// Protección básica: ocultar inmediatamente el papel al cambiar de pestaña, aplicación o ventana.
+document.addEventListener('visibilitychange',()=>{if(document.hidden)hideSecret()});
+window.addEventListener('blur',hideSecret);
+window.addEventListener('pagehide',hideSecret);
+loadSession();render();
+
+</script>
+</body>
+</html>
